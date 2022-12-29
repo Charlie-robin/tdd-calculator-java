@@ -1,39 +1,29 @@
 package org.example;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 import java.util.Stack;
+import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class Calculator {
 
-    public List<String> convertToPostFix(String toConvert) {
+    private final EquationValidator equationValidator = new EquationValidator();
+
+
+
+    public List<String> convertToPostFix(List<String> toConvert) {
         Stack<String> stack = new Stack<>();
         Stack<String> output = new Stack<>();
 
-        String[] equation = toConvert.split("");
 
-        boolean postDecimal = false;
-        boolean postOperator = false;
+        for (String item : toConvert) {
 
-        for (String item : equation) {
-
-            if (isNumeric(item) && !postDecimal) {
+            if (equationValidator.isNumeric(item)) {
                 output.push(item);
                 continue;
             }
-
-            if (isDecimal(item)) {
-                postDecimal = true;
-            }
-
-            if ((isNumeric(item) && postDecimal) || isDecimal(item)) {
-                String temp = output.pop();
-                output.push(temp + item);
-                continue;
-            }
-
-            postDecimal = false;
 
             if (stack.isEmpty() || stack.peek().equals("(")) {
                 stack.push(item);
@@ -70,7 +60,7 @@ public class Calculator {
 
         Stack<String> stack = new Stack<>();
         for (String item : toEvaluate) {
-            if (isNumeric(item)) {
+            if (equationValidator.isNumeric(item)) {
                 stack.push(item);
                 continue;
             }
@@ -101,15 +91,4 @@ public class Calculator {
         }
     }
 
-    private boolean isDecimal(String item) {
-        return item.equals(".");
-    }
-
-    private boolean isNumeric(String strNum) {
-        Pattern pattern = Pattern.compile("-?\\d+(\\.\\d+)?");
-        if (strNum == null) {
-            return false;
-        }
-        return pattern.matcher(strNum).matches();
-    }
 }
