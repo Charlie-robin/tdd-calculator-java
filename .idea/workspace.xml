@@ -8,7 +8,6 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Calculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Calculator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/EquationValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/EquationValidator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/org/example/EquationValidatorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/EquationValidatorTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -56,7 +55,7 @@
       <recent name="org.example" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.EquationValidatorTest.isNumeric_NotGivenNumbers_ReturnsFalse">
+  <component name="RunManager" selected="JUnit.EquationValidatorTest.validateEquation">
     <configuration name="All in calculator" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="calculator" />
       <option name="PACKAGE_NAME" value="" />
@@ -65,19 +64,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CalculatorTest and 2 more" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="calculator" />
-      <option name="TEST_OBJECT" value="pattern" />
-      <patterns>
-        <pattern testClass="org.example.CalculatorTest" />
-        <pattern testClass="org.example.EquationValidatorTest" />
-        <pattern testClass="org.example.PrecedenceTest" />
-      </patterns>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="CalculatorTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="EquationValidatorTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="calculator" />
       <extension name="coverage">
         <pattern>
@@ -86,13 +73,13 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="org.example" />
-      <option name="MAIN_CLASS_NAME" value="org.example.CalculatorTest" />
+      <option name="MAIN_CLASS_NAME" value="org.example.EquationValidatorTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="EquationValidatorTest.isNumeric_GivenNumbers_ReturnsTrue" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="EquationValidatorTest.formatEquation_EquationWithNegatives_ReturnsEquationsFormattedCorrectly" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="calculator" />
       <extension name="coverage">
         <pattern>
@@ -102,13 +89,13 @@
       </extension>
       <option name="PACKAGE_NAME" value="org.example" />
       <option name="MAIN_CLASS_NAME" value="org.example.EquationValidatorTest" />
-      <option name="METHOD_NAME" value="isNumeric_GivenNumbers_ReturnsTrue" />
+      <option name="METHOD_NAME" value="formatEquation_EquationWithNegatives_ReturnsEquationsFormattedCorrectly" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="EquationValidatorTest.isNumeric_NotGivenNumbers_ReturnsFalse" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="EquationValidatorTest.formatEquation_EquationWithWhiteSpace_ReturnsEquationFormattedCorrectly" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="calculator" />
       <extension name="coverage">
         <pattern>
@@ -118,7 +105,23 @@
       </extension>
       <option name="PACKAGE_NAME" value="org.example" />
       <option name="MAIN_CLASS_NAME" value="org.example.EquationValidatorTest" />
-      <option name="METHOD_NAME" value="isNumeric_NotGivenNumbers_ReturnsFalse" />
+      <option name="METHOD_NAME" value="formatEquation_EquationWithWhiteSpace_ReturnsEquationFormattedCorrectly" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="EquationValidatorTest.validateEquation" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="calculator" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.example" />
+      <option name="MAIN_CLASS_NAME" value="org.example.EquationValidatorTest" />
+      <option name="METHOD_NAME" value="validateEquation" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -126,11 +129,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.EquationValidatorTest.isNumeric_NotGivenNumbers_ReturnsFalse" />
-        <item itemvalue="JUnit.EquationValidatorTest.isNumeric_GivenNumbers_ReturnsTrue" />
+        <item itemvalue="JUnit.EquationValidatorTest.validateEquation" />
         <item itemvalue="JUnit.All in calculator" />
-        <item itemvalue="JUnit.CalculatorTest and 2 more" />
-        <item itemvalue="JUnit.CalculatorTest" />
+        <item itemvalue="JUnit.EquationValidatorTest.formatEquation_EquationWithNegatives_ReturnsEquationsFormattedCorrectly" />
+        <item itemvalue="JUnit.EquationValidatorTest.formatEquation_EquationWithWhiteSpace_ReturnsEquationFormattedCorrectly" />
+        <item itemvalue="JUnit.EquationValidatorTest" />
       </list>
     </recent_temporary>
   </component>

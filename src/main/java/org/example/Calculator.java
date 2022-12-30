@@ -82,6 +82,7 @@ public class Calculator {
             case "*":
                 return Double.parseDouble(a) * Double.parseDouble(b);
             case "/":
+                // TODO: THROW ERROR / 0
                 return Double.parseDouble(a) / Double.parseDouble(b);
             default:
                 return 0d;
