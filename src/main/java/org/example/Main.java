@@ -9,6 +9,5 @@ public class Main {
 //        System.out.println("Postfix " + postFix);
 //        System.out.println(calculator.evaluatePostFix(postFix));
 //        System.out.println("5 4 * 3 2 * + 1 -");
-
     }
 }

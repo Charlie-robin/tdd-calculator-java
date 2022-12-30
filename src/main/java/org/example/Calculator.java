@@ -1,16 +1,13 @@
 package org.example;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 import java.util.Stack;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
+
 
 public class Calculator {
 
     private final EquationValidator equationValidator = new EquationValidator();
-
 
 
     public List<String> convertToPostFix(List<String> toConvert) {
@@ -51,7 +48,7 @@ public class Calculator {
 
         while (!stack.isEmpty()) {
             output.push(stack.pop());
-    }
+        }
 
         return output;
     }

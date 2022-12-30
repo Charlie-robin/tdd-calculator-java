@@ -7,19 +7,21 @@ import java.util.regex.Pattern;
 
 public class EquationValidator {
 
-    public boolean isNumeric(String strNum) {
-        Pattern pattern = Pattern.compile("-?\\d+(\\.\\d+)?");
+    static final String IS_NUMBER = "-?\\d+(\\.\\d+)?";
+    static final String IS_NUMBER_OR_OPERATOR = "-?\\d*\\.?\\d+|[+\\-*/()]";
 
+    public boolean isNumeric(String strNum) {
+        Pattern pattern = Pattern.compile(IS_NUMBER);
         return pattern.matcher(strNum).matches();
     }
 
     public List<String> formatEquation(String equation){
-        Pattern p = Pattern.compile("-?\\d*\\.?\\d+|[+\\-*/()]");
-        Matcher m = p.matcher(equation);
+        Pattern pattern = Pattern.compile(IS_NUMBER_OR_OPERATOR);
+        Matcher matcher = pattern.matcher(equation);
         List<String> result = new ArrayList<>();
 
-        while(m.find()){
-            result.add(m.group());
+        while(matcher.find()){
+            result.add(matcher.group());
         }
 
         return result;

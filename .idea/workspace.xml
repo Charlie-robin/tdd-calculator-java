@@ -5,12 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d64f9932-f676-44a4-8cb7-5d4d6f4ae55f" name="Changes" comment="# ----------------------------------------------------------&#10;# Header - (type): Brief description&#10;# ----------------------------------------------------------&#10;#   * feat         A new feature&#10;#   * setup        Style/format changes (whitespace, etc.)&#10;#   * style        Style/format changes (whitespace, etc.)&#10;#   * fix          A bug fix&#10;#   * docs         Changes to documentation only&#10;#   * style        Style/format changes (whitespace, etc.)&#10;#   * refactor     Changes not related to a bug or feature&#10;#   * perf         Changes that affects performance&#10;#   * test         Changes that add/modify/correct tests&#10;#   * build        Changes to build system (configs, etc.)&#10;#   * ci           Changes to CI pipeline/workflow&#10;# ----------------------------------------------------------&#10;&#10;# ----------------------------------------------------------&#10;# Body - More detailed description, if necessary&#10;# ----------------------------------------------------------&#10;#   * Motivation behind changes, more detail into how &#10;# functionality might be affected, etc.&#10;# ----------------------------------------------------------&#10;&#10;# ----------------------------------------------------------&#10;# Footer - Associated issues, PRs, etc.&#10;# ----------------------------------------------------------&#10;#   * Ex: Resolves Issue #207, see PR #15, etc.&#10;# ----------------------------------------------------------">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/EquationValidator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/EquationValidatorTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Calculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Calculator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/EquationValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/EquationValidator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/CalculatorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/CalculatorTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/EquationValidatorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/EquationValidatorTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,16 +38,16 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
-    "last_opened_file_path": "C:/Users/charlie.richardson/development/personal/java/calculator"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/charlie.richardson/development/personal/java/calculator&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
@@ -57,7 +56,27 @@
       <recent name="org.example" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.CalculatorTest">
+  <component name="RunManager" selected="JUnit.EquationValidatorTest.isNumeric_NotGivenNumbers_ReturnsFalse">
+    <configuration name="All in calculator" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="calculator" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CalculatorTest and 2 more" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="calculator" />
+      <option name="TEST_OBJECT" value="pattern" />
+      <patterns>
+        <pattern testClass="org.example.CalculatorTest" />
+        <pattern testClass="org.example.EquationValidatorTest" />
+        <pattern testClass="org.example.PrecedenceTest" />
+      </patterns>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="CalculatorTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="calculator" />
       <extension name="coverage">
@@ -73,7 +92,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CalculatorTest.calculate_GivenRandomCharacter_ReturnsZero" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="EquationValidatorTest.isNumeric_GivenNumbers_ReturnsTrue" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="calculator" />
       <extension name="coverage">
         <pattern>
@@ -82,14 +101,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="org.example" />
-      <option name="MAIN_CLASS_NAME" value="org.example.CalculatorTest" />
-      <option name="METHOD_NAME" value="calculate_GivenRandomCharacter_ReturnsZero" />
+      <option name="MAIN_CLASS_NAME" value="org.example.EquationValidatorTest" />
+      <option name="METHOD_NAME" value="isNumeric_GivenNumbers_ReturnsTrue" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CalculatorTest.formatEquation_EquationWithBrackets_ReturnsEquationFormattedCorrectly" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="EquationValidatorTest.isNumeric_NotGivenNumbers_ReturnsFalse" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="calculator" />
       <extension name="coverage">
         <pattern>
@@ -98,40 +117,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="org.example" />
-      <option name="MAIN_CLASS_NAME" value="org.example.CalculatorTest" />
-      <option name="METHOD_NAME" value="formatEquation_EquationWithBrackets_ReturnsEquationFormattedCorrectly" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="CalculatorTest.formatEquation_EquationWithDecimals_ReturnsEquationFormattedCorrectly" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="calculator" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.example.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org.example" />
-      <option name="MAIN_CLASS_NAME" value="org.example.CalculatorTest" />
-      <option name="METHOD_NAME" value="formatEquation_EquationWithDecimals_ReturnsEquationFormattedCorrectly" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="CalculatorTest.formatEquation_EquationWithNegatives_ReturnsEquationFormattedCorrectly" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="calculator" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.example.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org.example" />
-      <option name="MAIN_CLASS_NAME" value="org.example.CalculatorTest" />
-      <option name="METHOD_NAME" value="formatEquation_EquationWithNegatives_ReturnsEquationFormattedCorrectly" />
+      <option name="MAIN_CLASS_NAME" value="org.example.EquationValidatorTest" />
+      <option name="METHOD_NAME" value="isNumeric_NotGivenNumbers_ReturnsFalse" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -139,11 +126,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.EquationValidatorTest.isNumeric_NotGivenNumbers_ReturnsFalse" />
+        <item itemvalue="JUnit.EquationValidatorTest.isNumeric_GivenNumbers_ReturnsTrue" />
+        <item itemvalue="JUnit.All in calculator" />
+        <item itemvalue="JUnit.CalculatorTest and 2 more" />
         <item itemvalue="JUnit.CalculatorTest" />
-        <item itemvalue="JUnit.CalculatorTest.formatEquation_EquationWithDecimals_ReturnsEquationFormattedCorrectly" />
-        <item itemvalue="JUnit.CalculatorTest.formatEquation_EquationWithNegatives_ReturnsEquationFormattedCorrectly" />
-        <item itemvalue="JUnit.CalculatorTest.formatEquation_EquationWithBrackets_ReturnsEquationFormattedCorrectly" />
-        <item itemvalue="JUnit.CalculatorTest.calculate_GivenRandomCharacter_ReturnsZero" />
       </list>
     </recent_temporary>
   </component>
