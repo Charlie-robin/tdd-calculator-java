@@ -8,7 +8,7 @@ import java.util.Stack;
 public class Calculator {
 
     private final EquationValidator equationValidator = new EquationValidator();
-
+    private final Precedence precedence = new Precedence();
 
     public List<String> convertToPostFix(List<String> toConvert) {
         Stack<String> stack = new Stack<>();
@@ -37,7 +37,7 @@ public class Calculator {
 
             String lastItem = stack.pop();
 
-            if (Precedence.hasPrecedence(lastItem, item)) {
+            if (precedence.hasPrecedence(lastItem, item)) {
                 output.push(lastItem);
                 stack.push(item);
             } else {

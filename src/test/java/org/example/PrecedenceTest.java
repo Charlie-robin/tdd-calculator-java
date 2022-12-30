@@ -8,14 +8,15 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 
 class PrecedenceTest {
 
+    private final Precedence precedence = new Precedence();
 
     @Test
     void hasPrecedence_PrecedenceValue2ComparedToLowest_ReturnsTrue() {
         String[] operators = {"+", "-", "(", ")"};
 
         for (String operator : operators) {
-            assertTrue(Precedence.hasPrecedence("*", operator));
-            assertTrue(Precedence.hasPrecedence("/", operator));
+            assertTrue(precedence.hasPrecedence("*", operator));
+            assertTrue(precedence.hasPrecedence("/", operator));
         }
 
     }
@@ -25,25 +26,25 @@ class PrecedenceTest {
         String[] operators = { "(", ")"};
 
         for (String operator : operators) {
-            assertTrue(Precedence.hasPrecedence("+", operator));
-            assertTrue(Precedence.hasPrecedence("-", operator));
+            assertTrue(precedence.hasPrecedence("+", operator));
+            assertTrue(precedence.hasPrecedence("-", operator));
         }
 
     }
 
     @Test
     void hasPrecedence_PrecedenceComparedToSamePrecedence_ReturnsTrue() {
-        assertTrue(Precedence.hasPrecedence("*", "/"));
-        assertTrue(Precedence.hasPrecedence("/", "*"));
-        assertTrue(Precedence.hasPrecedence("*", "*"));
-        assertTrue(Precedence.hasPrecedence("/", "/"));
-        assertTrue(Precedence.hasPrecedence("+", "-"));
-        assertTrue(Precedence.hasPrecedence("-", "+"));
-        assertTrue(Precedence.hasPrecedence("+", "+"));
-        assertTrue(Precedence.hasPrecedence("-", "-"));
-        assertTrue(Precedence.hasPrecedence("(", ")"));
-        assertTrue(Precedence.hasPrecedence(")", "("));
-        assertTrue(Precedence.hasPrecedence("(", "("));
-        assertTrue(Precedence.hasPrecedence(")", ")"));
+        assertTrue(precedence.hasPrecedence("*", "/"));
+        assertTrue(precedence.hasPrecedence("/", "*"));
+        assertTrue(precedence.hasPrecedence("*", "*"));
+        assertTrue(precedence.hasPrecedence("/", "/"));
+        assertTrue(precedence.hasPrecedence("+", "-"));
+        assertTrue(precedence.hasPrecedence("-", "+"));
+        assertTrue(precedence.hasPrecedence("+", "+"));
+        assertTrue(precedence.hasPrecedence("-", "-"));
+        assertTrue(precedence.hasPrecedence("(", ")"));
+        assertTrue(precedence.hasPrecedence(")", "("));
+        assertTrue(precedence.hasPrecedence("(", "("));
+        assertTrue(precedence.hasPrecedence(")", ")"));
     }
 }

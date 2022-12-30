@@ -8,6 +8,24 @@ import java.util.regex.Pattern;
 
 public class EquationValidator {
 
+    public boolean isNumeric(String strNum) {
+        String isNumber = "-?\\d*\\.?\\d+";
+        Pattern pattern = Pattern.compile(isNumber);
+        return pattern.matcher(strNum).matches();
+    }
+
+    public List<String> formatEquation(String equation) {
+        String isNumberOrOperator = "(?<!\\d)-?\\d*\\.?\\d+|[+\\-*/()]";
+        Pattern pattern = Pattern.compile(isNumberOrOperator);
+        Matcher matcher = pattern.matcher(equation);
+        List<String> result = new ArrayList<>();
+
+        while (matcher.find()) {
+            result.add(matcher.group());
+        }
+
+        return result;
+    }
     public void validateEquation(String equation) {
         // TODO: THROW ERRORS
         if (hasWords(equation)) return;
@@ -49,23 +67,6 @@ public class EquationValidator {
         return !brackets.isEmpty();
     }
 
-    public boolean isNumeric(String strNum) {
-        String isNumber = "-?\\d*\\.?\\d+";
-        Pattern pattern = Pattern.compile(isNumber);
-        return pattern.matcher(strNum).matches();
-    }
 
-    public List<String> formatEquation(String equation) {
-        String isNumberOrOperator = "(?<!\\d)-?\\d*\\.?\\d+|[+\\-*/()]";
-        Pattern pattern = Pattern.compile(isNumberOrOperator);
-        Matcher matcher = pattern.matcher(equation);
-        List<String> result = new ArrayList<>();
-
-        while (matcher.find()) {
-            result.add(matcher.group());
-        }
-
-        return result;
-    }
 
 }

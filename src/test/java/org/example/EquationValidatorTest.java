@@ -74,7 +74,6 @@ class EquationValidatorTest {
     void formatEquation_EquationWithNegatives_ReturnsEquationsFormattedCorrectly() {
         List<String> result = equationValidator.formatEquation("200 + -3 * -4 / 5 - -6");
         String[] expected = new String[]{"200", "+", "-3", "*", "-4", "/", "5", "-", "-6",};
-        System.out.println(result);
         assertArrayEquals(expected, result.toArray());
     }
 
