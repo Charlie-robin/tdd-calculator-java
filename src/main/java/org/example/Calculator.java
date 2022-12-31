@@ -7,7 +7,7 @@ import java.util.Stack;
 
 public class Calculator {
 
-    private final EquationValidator equationValidator = new EquationValidator();
+    private final EquationUtilities equationUtilities = new EquationUtilities();
     private final Precedence precedence = new Precedence();
 
     public List<String> convertToPostFix(List<String> toConvert) {
@@ -17,7 +17,7 @@ public class Calculator {
 
         for (String item : toConvert) {
 
-            if (equationValidator.isNumeric(item)) {
+            if (equationUtilities.isNumeric(item)) {
                 output.push(item);
                 continue;
             }
@@ -57,7 +57,7 @@ public class Calculator {
 
         Stack<String> stack = new Stack<>();
         for (String item : toEvaluate) {
-            if (equationValidator.isNumeric(item)) {
+            if (equationUtilities.isNumeric(item)) {
                 stack.push(item);
                 continue;
             }
@@ -71,6 +71,13 @@ public class Calculator {
         String result = stack.pop();
 
         return Double.parseDouble(result);
+    }
+
+    public double calculate(String equation){
+        equationUtilities.validateEquation(equation);
+        List<String> formatEquation = equationUtilities.formatEquation(equation);
+        List<String> postFix = convertToPostFix(formatEquation);
+        return evaluatePostFix(postFix);
     }
 
     public double calculate(String a, String b, String operand) {

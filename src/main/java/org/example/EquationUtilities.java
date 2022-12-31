@@ -6,7 +6,7 @@ import java.util.Stack;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class EquationValidator {
+public class EquationUtilities {
 
     public boolean isNumeric(String strNum) {
         String isNumber = "-?\\d*\\.?\\d+";
@@ -27,15 +27,12 @@ public class EquationValidator {
         return result;
     }
     public void validateEquation(String equation) {
-        // TODO: THROW ERRORS
-        if (hasWords(equation)) return;
-        if (hasMultipleOperators(equation)) return;
-        if (hasInvalidBrackets(equation)) return;
-
-        System.out.println("ALL GOOD " + equation);
+        if (hasCharacters(equation)) throw new IllegalArgumentException("Illegal Characters found in : " + equation);
+        if (hasInvalidBrackets(equation)) throw new IllegalArgumentException("Invalid Brackets found in : " + equation);
+        if (hasMultipleOperators(equation)) throw new IllegalArgumentException("Multiple operators found in : " + equation);
     }
 
-    private boolean hasWords(String equation) {
+    private boolean hasCharacters(String equation) {
         String words = "[a-z]";
         Pattern pattern = Pattern.compile(words, Pattern.CASE_INSENSITIVE);
         Matcher matcher = pattern.matcher(equation);

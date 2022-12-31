@@ -5,7 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d64f9932-f676-44a4-8cb7-5d4d6f4ae55f" name="Changes" comment="# ----------------------------------------------------------&#10;# Header - (type): Brief description&#10;# ----------------------------------------------------------&#10;#   * feat         A new feature&#10;#   * setup        Style/format changes (whitespace, etc.)&#10;#   * style        Style/format changes (whitespace, etc.)&#10;#   * fix          A bug fix&#10;#   * docs         Changes to documentation only&#10;#   * style        Style/format changes (whitespace, etc.)&#10;#   * refactor     Changes not related to a bug or feature&#10;#   * perf         Changes that affects performance&#10;#   * test         Changes that add/modify/correct tests&#10;#   * build        Changes to build system (configs, etc.)&#10;#   * ci           Changes to CI pipeline/workflow&#10;# ----------------------------------------------------------&#10;&#10;# ----------------------------------------------------------&#10;# Body - More detailed description, if necessary&#10;# ----------------------------------------------------------&#10;#   * Motivation behind changes, more detail into how &#10;# functionality might be affected, etc.&#10;# ----------------------------------------------------------&#10;&#10;# ----------------------------------------------------------&#10;# Footer - Associated issues, PRs, etc.&#10;# ----------------------------------------------------------&#10;#   * Ex: Resolves Issue #207, see PR #15, etc.&#10;# ----------------------------------------------------------">
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/EquationValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/EquationValidator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Calculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Calculator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/EquationValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/EquationUtilities.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/CalculatorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/CalculatorTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/EquationValidatorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/EquationUtilitiesTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,7 +65,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="EquationValidatorTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="CalculatorTest.calculate_ScientificEquationWithPrecedenceAndBrackets_ReturnsValue" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="calculator" />
       <extension name="coverage">
         <pattern>
@@ -70,29 +74,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="org.example" />
-      <option name="MAIN_CLASS_NAME" value="org.example.EquationValidatorTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="EquationValidatorTest.formatEquation_EquationWithNegatives_ReturnsEquationsFormattedCorrectly" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="calculator" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.example.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org.example" />
-      <option name="MAIN_CLASS_NAME" value="org.example.EquationValidatorTest" />
-      <option name="METHOD_NAME" value="formatEquation_EquationWithNegatives_ReturnsEquationsFormattedCorrectly" />
+      <option name="MAIN_CLASS_NAME" value="org.example.CalculatorTest" />
+      <option name="METHOD_NAME" value="calculate_ScientificEquationWithPrecedenceAndBrackets_ReturnsValue" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="EquationValidatorTest.formatEquation_EquationWithWhiteSpace_ReturnsEquationFormattedCorrectly" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="CalculatorTest.calculate_SimpleEquationWithPrecedence_ReturnsValue" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="calculator" />
       <extension name="coverage">
         <pattern>
@@ -101,14 +90,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="org.example" />
-      <option name="MAIN_CLASS_NAME" value="org.example.EquationValidatorTest" />
-      <option name="METHOD_NAME" value="formatEquation_EquationWithWhiteSpace_ReturnsEquationFormattedCorrectly" />
+      <option name="MAIN_CLASS_NAME" value="org.example.CalculatorTest" />
+      <option name="METHOD_NAME" value="calculate_SimpleEquationWithPrecedence_ReturnsValue" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="EquationValidatorTest.validateEquation" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="CalculatorTest.calculate_SimpleEquation_ReturnsValue" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="calculator" />
       <extension name="coverage">
         <pattern>
@@ -117,8 +106,24 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="org.example" />
-      <option name="MAIN_CLASS_NAME" value="org.example.EquationValidatorTest" />
-      <option name="METHOD_NAME" value="validateEquation" />
+      <option name="MAIN_CLASS_NAME" value="org.example.CalculatorTest" />
+      <option name="METHOD_NAME" value="calculate_SimpleEquation_ReturnsValue" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="EquationUtilitiesTest.validateEquation_GivenEquationWithMultipleOperators_ThrowsException" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="calculator" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.example" />
+      <option name="MAIN_CLASS_NAME" value="org.example.EquationUtilitiesTest" />
+      <option name="METHOD_NAME" value="validateEquation_GivenEquationWithMultipleOperators_ThrowsException" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -127,10 +132,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.All in calculator" />
-        <item itemvalue="JUnit.EquationValidatorTest.validateEquation" />
-        <item itemvalue="JUnit.EquationValidatorTest.formatEquation_EquationWithNegatives_ReturnsEquationsFormattedCorrectly" />
-        <item itemvalue="JUnit.EquationValidatorTest.formatEquation_EquationWithWhiteSpace_ReturnsEquationFormattedCorrectly" />
-        <item itemvalue="JUnit.EquationValidatorTest" />
+        <item itemvalue="JUnit.CalculatorTest.calculate_ScientificEquationWithPrecedenceAndBrackets_ReturnsValue" />
+        <item itemvalue="JUnit.CalculatorTest.calculate_SimpleEquationWithPrecedence_ReturnsValue" />
+        <item itemvalue="JUnit.CalculatorTest.calculate_SimpleEquation_ReturnsValue" />
+        <item itemvalue="JUnit.EquationUtilitiesTest.validateEquation_GivenEquationWithMultipleOperators_ThrowsException" />
       </list>
     </recent_temporary>
   </component>
