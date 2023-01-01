@@ -8,7 +8,7 @@ import java.util.Stack;
 public class Calculator {
 
     private final EquationUtilities equationUtilities = new EquationUtilities();
-    private final Precedence precedence = new Precedence();
+    private final Operators operators = new Operators();
 
     public List<String> convertToPostFix(List<String> toConvert) {
         Stack<String> stack = new Stack<>();
@@ -16,7 +16,6 @@ public class Calculator {
 
 
         for (String item : toConvert) {
-
             if (equationUtilities.isNumeric(item)) {
                 output.push(item);
                 continue;
@@ -37,7 +36,7 @@ public class Calculator {
 
             String lastItem = stack.pop();
 
-            if (precedence.hasPrecedence(lastItem, item)) {
+            if (operators.hasPrecedence(lastItem, item)) {
                 output.push(lastItem);
                 stack.push(item);
             } else {
@@ -65,7 +64,7 @@ public class Calculator {
             String operand2 = stack.pop();
             String operand1 = stack.pop();
 
-            stack.push(String.valueOf(calculate(operand1, operand2, item)));
+            stack.push(String.valueOf(calculate(operand1, operand2, item.charAt(0))));
         }
 
         String result = stack.pop();
@@ -73,23 +72,24 @@ public class Calculator {
         return Double.parseDouble(result);
     }
 
-    public double calculate(String equation){
+    public double calculate(String equation) throws IllegalArgumentException {
         equationUtilities.validateEquation(equation);
         List<String> formatEquation = equationUtilities.formatEquation(equation);
         List<String> postFix = convertToPostFix(formatEquation);
         return evaluatePostFix(postFix);
     }
 
-    public double calculate(String a, String b, String operand) {
+    public double calculate(String a, String b, char operand) {
+
         switch (operand) {
-            case "+":
+            case Operators.ADDITION:
                 return Double.parseDouble(a) + Double.parseDouble(b);
-            case "-":
+            case Operators.SUBTRACTION:
                 return Double.parseDouble(a) - Double.parseDouble(b);
-            case "*":
+            case Operators.MULTIPLICATION:
                 return Double.parseDouble(a) * Double.parseDouble(b);
-            case "/":
-                // TODO: THROW ERROR / 0
+            case Operators.DIVISION:
+                // TODO: THROW ERROR -> A / 0
                 return Double.parseDouble(a) / Double.parseDouble(b);
             default:
                 return 0d;

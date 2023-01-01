@@ -70,27 +70,27 @@ class CalculatorTest {
 
     @Test
     void calculate_GivenAddition_ReturnsAdditionResult() {
-        assertEquals(5, calculator.calculate("2", "3", "+"));
+        assertEquals(5, calculator.calculate("2", "3", '+'));
     }
 
     @Test
     void calculate_GivenSubtraction_ReturnsSubtractionResult() {
-        assertEquals(177, calculator.calculate("200", "23", "-"));
+        assertEquals(177, calculator.calculate("200", "23", '-'));
     }
 
     @Test
     void calculate_GivenDivision_ReturnsDivisionResult() {
-        assertEquals(2, calculator.calculate("20", "10", "/"));
+        assertEquals(2, calculator.calculate("20", "10", '/'));
     }
 
     @Test
     void calculate_GivenMultiplication_ReturnsMultiplicationResult() {
-        assertEquals(200, calculator.calculate("20", "10", "*"));
+        assertEquals(200, calculator.calculate("20", "10", '*'));
     }
 
     @Test
     void calculate_GivenRandomCharacter_ReturnsZero() {
-        assertEquals(0, calculator.calculate("20", "10", "!"));
+        assertEquals(0, calculator.calculate("20", "10", '!'));
     }
 
     @Test

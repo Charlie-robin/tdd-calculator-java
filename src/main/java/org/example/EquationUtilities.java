@@ -26,7 +26,7 @@ public class EquationUtilities {
 
         return result;
     }
-    public void validateEquation(String equation) {
+    public void validateEquation(String equation) throws IllegalArgumentException {
         if (hasCharacters(equation)) throw new IllegalArgumentException("Illegal Characters found in : " + equation);
         if (hasInvalidBrackets(equation)) throw new IllegalArgumentException("Invalid Brackets found in : " + equation);
         if (hasMultipleOperators(equation)) throw new IllegalArgumentException("Multiple operators found in : " + equation);
@@ -54,7 +54,7 @@ public class EquationUtilities {
         for (int index = 0; index < justBrackets.length(); index++) {
             char bracket = justBrackets.charAt(index);
 
-            if (!brackets.isEmpty() && brackets.peek() == '(' && bracket == ')') {
+            if (!brackets.isEmpty() && brackets.peek() == Operators.OPENING_BRACKET &&  bracket == Operators.CLOSING_BRACKET) {
                 brackets.pop();
             } else {
                 brackets.push(bracket);
