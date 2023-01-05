@@ -1,6 +1,8 @@
 package org.example;
 
 import java.util.Scanner;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 
 public class Commands {
@@ -8,11 +10,27 @@ public class Commands {
     public void printMessage(String message){
         System.out.println(message);
     }
+    public void printMessage(char message){
+        System.out.print(message);
+    }
 
-    public void printCommands(String[] commands){
+    public void printNumberedOptions(String[] commands){
         for (int i = 0; i < commands.length; i++) {
             printMessage((i + 1) + " : " + commands[i]);
         }
+    }
+
+    public void printOptions(String[] commands){
+        for (String command : commands) {
+            printMessage(command);
+        }
+    }
+    public void printOptions(char[] commands){
+        for (char command : commands) {
+            printMessage(command);
+            printMessage(' ');
+        }
+        printMessage("");
     }
 
     public int getIntegerInput(int rangeLimit){

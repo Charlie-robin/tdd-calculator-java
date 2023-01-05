@@ -6,22 +6,28 @@ public class Main {
 
     /**
      * TODO:
-     * - PRINT OPTIONS
      * - CLASSES FOR:
-     *  - CALCULATOR COMMANDS
      *  - ERROR COMMANDS
      */
 
     public static void main(String[] args) {
-        Calculator calculator = new Calculator();
+        String[] options = {"Calculate", "Quit"};
         Commands commands = new Commands();
+        CalculatorController calculatorController = new CalculatorController(commands);
+        int input;
 
         while (true) {
-            commands.printMessage("Enter equation");
-            String equation = commands.getStringInput();
+            commands.printMessage("Welcome to the Calculator Home");
+            commands.printMessage("What would you like to do?");
+            commands.printNumberedOptions(options);
+            input = commands.getIntegerInput(options.length);
+
             try {
-                double result = calculator.calculate(equation);
-                commands.printMessage(String.valueOf(result));
+                if (input == 1) {
+                    calculatorController.run();
+                } else {
+                    break;
+                }
             } catch (Exception e) {
                 System.out.println(e.getMessage());
                 e.printStackTrace();

@@ -12,9 +12,12 @@ public class Operators {
     public final static char OPENING_BRACKET = '(';
     public final static char CLOSING_BRACKET = ')';
 
+    private final char[] supportedOperators = {ADDITION, MULTIPLICATION, DIVISION, SUBTRACTION, OPENING_BRACKET,
+            CLOSING_BRACKET};
+
     private final Map<Character, Integer> precedence = new HashMap<>();
 
-     {
+    {
         precedence.put(MULTIPLICATION, 2);
         precedence.put(DIVISION, 2);
         precedence.put(ADDITION, 1);
@@ -23,11 +26,15 @@ public class Operators {
         precedence.put(CLOSING_BRACKET, 0);
     }
 
-    public  boolean hasPrecedence(char a, char b) {
+    public boolean hasPrecedence(char a, char b) {
         return precedence.get(a) >= precedence.get(b);
     }
 
-    public  boolean hasPrecedence(String a, String b) {
-        return precedence.get(a.charAt(0)) >= precedence.get(b.charAt(0));
+    public boolean hasPrecedence(String a, String b) {
+        return hasPrecedence(a.charAt(0), b.charAt(0));
+    }
+
+    public char[] getSupportedOperators() {
+        return supportedOperators;
     }
 }

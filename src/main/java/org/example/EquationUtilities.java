@@ -15,21 +15,51 @@ public class EquationUtilities {
     }
 
     public List<String> formatEquation(String equation) {
-        String isNumberOrOperator = "(?<!\\d)-?\\d*\\.?\\d+|[+\\-*/()]";
-        Pattern pattern = Pattern.compile(isNumberOrOperator);
-        Matcher matcher = pattern.matcher(equation);
-        List<String> result = new ArrayList<>();
 
-        while (matcher.find()) {
-            result.add(matcher.group());
+        List<String> formattedEquation = new ArrayList<>();
+
+        for (int i = 0; i < equation.length(); i++) {
+            char item = equation.charAt(i);
+
+            if (item == '-') {
+                if (i + 1 < equation.length() && Character.isDigit(equation.charAt(i + 1)) && !Character.isDigit(equation.charAt(i - 1))) {
+                    StringBuilder token = new StringBuilder();
+                    token.append(item);
+                    i++;
+                    while (i < equation.length() && (Character.isDigit(equation.charAt(i)) || equation.charAt(i) == '.')) {
+                        token.append(equation.charAt(i));
+                        i++;
+                    }
+                    formattedEquation.add(token.toString());
+                    i--;
+                }
+                else {
+                    formattedEquation.add(Character.toString(item));
+                }
+            }
+            else if (Character.isDigit(item)) {
+                StringBuilder token = new StringBuilder();
+                while (i < equation.length() && (Character.isDigit(equation.charAt(i)) || equation.charAt(i) == '.')) {
+                    token.append(equation.charAt(i));
+                    i++;
+                }
+                formattedEquation.add(token.toString());
+                i--;
+            }
+            // If the character is an operator or parenthesis, add it as a separate token
+            else if (item == '+' || item == '*' || item == '/' || item == '(' || item == ')') {
+                formattedEquation.add(Character.toString(item));
+            }
         }
 
-        return result;
+        return formattedEquation;
     }
+
     public void validateEquation(String equation) throws IllegalArgumentException {
         if (hasCharacters(equation)) throw new IllegalArgumentException("Illegal Characters found in : " + equation);
         if (hasInvalidBrackets(equation)) throw new IllegalArgumentException("Invalid Brackets found in : " + equation);
-        if (hasMultipleOperators(equation)) throw new IllegalArgumentException("Multiple operators found in : " + equation);
+        if (hasMultipleOperators(equation))
+            throw new IllegalArgumentException("Multiple operators found in : " + equation);
     }
 
     private boolean hasCharacters(String equation) {
@@ -54,7 +84,7 @@ public class EquationUtilities {
         for (int index = 0; index < justBrackets.length(); index++) {
             char bracket = justBrackets.charAt(index);
 
-            if (!brackets.isEmpty() && brackets.peek() == Operators.OPENING_BRACKET &&  bracket == Operators.CLOSING_BRACKET) {
+            if (!brackets.isEmpty() && brackets.peek() == Operators.OPENING_BRACKET && bracket == Operators.CLOSING_BRACKET) {
                 brackets.pop();
             } else {
                 brackets.push(bracket);
@@ -63,7 +93,6 @@ public class EquationUtilities {
 
         return !brackets.isEmpty();
     }
-
 
 
 }

@@ -6,7 +6,6 @@ import java.util.Stack;
 
 
 public class Calculator {
-
     private final EquationUtilities equationUtilities = new EquationUtilities();
     private final Operators operators = new Operators();
 
@@ -21,7 +20,7 @@ public class Calculator {
                 continue;
             }
 
-            if (stack.isEmpty() || stack.peek().equals("(")) {
+            if (stack.isEmpty() || item.equals("(") || stack.peek().equals("(")) {
                 stack.push(item);
                 continue;
             }
@@ -75,7 +74,9 @@ public class Calculator {
     public double calculate(String equation) throws IllegalArgumentException {
         equationUtilities.validateEquation(equation);
         List<String> formatEquation = equationUtilities.formatEquation(equation);
+        System.out.println(formatEquation);
         List<String> postFix = convertToPostFix(formatEquation);
+        System.out.println(postFix);
         return evaluatePostFix(postFix);
     }
 
@@ -94,6 +95,10 @@ public class Calculator {
             default:
                 return 0d;
         }
+    }
+
+    public char[] getSupportedOperators() {
+        return operators.getSupportedOperators();
     }
 
 }
