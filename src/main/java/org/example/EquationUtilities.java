@@ -1,8 +1,6 @@
 package org.example;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Stack;
+import java.util.*;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -23,31 +21,27 @@ public class EquationUtilities {
 
             if (item == '-') {
                 if (i + 1 < equation.length() && Character.isDigit(equation.charAt(i + 1)) && !Character.isDigit(equation.charAt(i - 1))) {
-                    StringBuilder token = new StringBuilder();
-                    token.append(item);
+                    StringBuilder number = new StringBuilder();
+                    number.append(item);
                     i++;
                     while (i < equation.length() && (Character.isDigit(equation.charAt(i)) || equation.charAt(i) == '.')) {
-                        token.append(equation.charAt(i));
+                        number.append(equation.charAt(i));
                         i++;
                     }
-                    formattedEquation.add(token.toString());
+                    formattedEquation.add(number.toString());
                     i--;
-                }
-                else {
+                } else {
                     formattedEquation.add(Character.toString(item));
                 }
-            }
-            else if (Character.isDigit(item)) {
-                StringBuilder token = new StringBuilder();
+            } else if (Character.isDigit(item)) {
+                StringBuilder number = new StringBuilder();
                 while (i < equation.length() && (Character.isDigit(equation.charAt(i)) || equation.charAt(i) == '.')) {
-                    token.append(equation.charAt(i));
+                    number.append(equation.charAt(i));
                     i++;
                 }
-                formattedEquation.add(token.toString());
+                formattedEquation.add(number.toString());
                 i--;
-            }
-            // If the character is an operator or parenthesis, add it as a separate token
-            else if (item == '+' || item == '*' || item == '/' || item == '(' || item == ')') {
+            } else if (item == '+' || item == '*' || item == '/' || item == '(' || item == ')') {
                 formattedEquation.add(Character.toString(item));
             }
         }

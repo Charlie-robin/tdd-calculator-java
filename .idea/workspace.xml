@@ -5,14 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d64f9932-f676-44a4-8cb7-5d4d6f4ae55f" name="Changes" comment="# ----------------------------------------------------------&#10;# Header - (type): Brief description&#10;# ----------------------------------------------------------&#10;#   * feat         A new feature&#10;#   * setup        Style/format changes (whitespace, etc.)&#10;#   * style        Style/format changes (whitespace, etc.)&#10;#   * fix          A bug fix&#10;#   * docs         Changes to documentation only&#10;#   * style        Style/format changes (whitespace, etc.)&#10;#   * refactor     Changes not related to a bug or feature&#10;#   * perf         Changes that affects performance&#10;#   * test         Changes that add/modify/correct tests&#10;#   * build        Changes to build system (configs, etc.)&#10;#   * ci           Changes to CI pipeline/workflow&#10;# ----------------------------------------------------------&#10;&#10;# ----------------------------------------------------------&#10;# Body - More detailed description, if necessary&#10;# ----------------------------------------------------------&#10;#   * Motivation behind changes, more detail into how &#10;# functionality might be affected, etc.&#10;# ----------------------------------------------------------&#10;&#10;# ----------------------------------------------------------&#10;# Footer - Associated issues, PRs, etc.&#10;# ----------------------------------------------------------&#10;#   * Ex: Resolves Issue #207, see PR #15, etc.&#10;# ----------------------------------------------------------">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/CalculatorController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Calculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Calculator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Commands.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Commands.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/EquationUtilities.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/EquationUtilities.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Operators.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Operators.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/CalculatorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/CalculatorTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,7 +57,7 @@
       <recent name="org.example" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.All in calculator">
+  <component name="RunManager" selected="JUnit.EquationUtilitiesTest.formatEquation_EquationWithOutWhiteSpace_ReturnsEquationFormattedCorrectly">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.example.Main" />
       <module name="calculator" />
@@ -85,22 +79,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CalculatorTest.calculate_ScientificEquationWithPrecedenceAndBrackets_ReturnsValue" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="calculator" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.example.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org.example" />
-      <option name="MAIN_CLASS_NAME" value="org.example.CalculatorTest" />
-      <option name="METHOD_NAME" value="calculate_ScientificEquationWithPrecedenceAndBrackets_ReturnsValue" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="CalculatorTest.calculate_ScientificEquationWithPrecedenceBrackets_ReturnsValue" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="calculator" />
       <extension name="coverage">
@@ -112,6 +90,22 @@
       <option name="PACKAGE_NAME" value="org.example" />
       <option name="MAIN_CLASS_NAME" value="org.example.CalculatorTest" />
       <option name="METHOD_NAME" value="calculate_ScientificEquationWithPrecedenceBrackets_ReturnsValue" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="EquationUtilitiesTest.formatEquation_EquationWithOutWhiteSpace_ReturnsEquationFormattedCorrectly" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="calculator" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.example" />
+      <option name="MAIN_CLASS_NAME" value="org.example.EquationUtilitiesTest" />
+      <option name="METHOD_NAME" value="formatEquation_EquationWithOutWhiteSpace_ReturnsEquationFormattedCorrectly" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -135,11 +129,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.EquationUtilitiesTest.formatEquation_EquationWithOutWhiteSpace_ReturnsEquationFormattedCorrectly" />
         <item itemvalue="JUnit.All in calculator" />
         <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.CalculatorTest.calculate_ScientificEquationWithPrecedenceBrackets_ReturnsValue" />
         <item itemvalue="JUnit.EquationUtilitiesTest.validateEquation_GivenEquationWithMultipleOperators_ThrowsException" />
-        <item itemvalue="JUnit.CalculatorTest.calculate_ScientificEquationWithPrecedenceAndBrackets_ReturnsValue" />
       </list>
     </recent_temporary>
   </component>
