@@ -74,9 +74,7 @@ public class Calculator {
     public double calculate(String equation) throws IllegalArgumentException {
         equationUtilities.validateEquation(equation);
         List<String> formatEquation = equationUtilities.formatEquation(equation);
-        System.out.println(formatEquation);
         List<String> postFix = convertToPostFix(formatEquation);
-        System.out.println(postFix);
         return evaluatePostFix(postFix);
     }
 

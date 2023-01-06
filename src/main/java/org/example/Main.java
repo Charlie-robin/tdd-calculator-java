@@ -6,8 +6,9 @@ public class Main {
 
     /**
      * TODO:
+     * - README
      * - CLASSES FOR:
-     *  - ERROR COMMANDS
+     *  - ERROR CONTROLLER/COMMANDS
      */
 
     public static void main(String[] args) {

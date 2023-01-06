@@ -108,7 +108,7 @@ class CalculatorTest {
         assertEquals(calculator.calculate("( 5 * 4 + 3 * 2 ) - 1"), 25);
     }
     @Test
-    void calculate_ScientificEquationWithPrecedenceBrackets_ReturnsValue() {
+    void calculate_ScientificEquationWithPrecedenceBracketsMultipleDecimals_ReturnsValue() {
         assertEquals(calculator.calculate("((2-1)/2)--2*2"), 4.5);
     }
 }
