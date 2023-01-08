@@ -25,6 +25,7 @@ public class CalculatorController implements Runnable {
                     commands.printOptions(calculator.getSupportedOperators());
                     break;
                 case 2:
+                    commands.printMessage("Equation");
                     commands.printMessage("Example equation (5 + 5) / 2");
                     commands.printMessage("Enter equation");
                     String equation = commands.getStringInput();
