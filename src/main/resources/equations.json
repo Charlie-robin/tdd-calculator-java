@@ -1,0 +1,16 @@
+[ {
+  "id" : 0,
+  "equation" : "2+2",
+  "result" : 4.0,
+  "date" : "Mon Jan 09 22:02:29 GMT 2023"
+}, {
+  "id" : 1,
+  "equation" : "5 + 5",
+  "result" : 10.0,
+  "date" : "Thu Jan 26 21:52:14 GMT 2023"
+}, {
+  "id" : 2,
+  "equation" : "(5+5)/2",
+  "result" : 5.0,
+  "date" : "Thu Jan 26 21:54:25 GMT 2023"
+} ]

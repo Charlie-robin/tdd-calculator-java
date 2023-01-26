@@ -5,7 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d64f9932-f676-44a4-8cb7-5d4d6f4ae55f" name="Changes" comment="# ----------------------------------------------------------&#10;# Header - (type): Brief description&#10;# ----------------------------------------------------------&#10;#   * feat         A new feature&#10;#   * setup        Style/format changes (whitespace, etc.)&#10;#   * style        Style/format changes (whitespace, etc.)&#10;#   * fix          A bug fix&#10;#   * docs         Changes to documentation only&#10;#   * style        Style/format changes (whitespace, etc.)&#10;#   * refactor     Changes not related to a bug or feature&#10;#   * perf         Changes that affects performance&#10;#   * test         Changes that add/modify/correct tests&#10;#   * build        Changes to build system (configs, etc.)&#10;#   * ci           Changes to CI pipeline/workflow&#10;# ----------------------------------------------------------&#10;&#10;# ----------------------------------------------------------&#10;# Body - More detailed description, if necessary&#10;# ----------------------------------------------------------&#10;#   * Motivation behind changes, more detail into how &#10;# functionality might be affected, etc.&#10;# ----------------------------------------------------------&#10;&#10;# ----------------------------------------------------------&#10;# Footer - Associated issues, PRs, etc.&#10;# ----------------------------------------------------------&#10;#   * Ex: Resolves Issue #207, see PR #15, etc.&#10;# ----------------------------------------------------------">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/EquationEntry.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/EquationRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/JSONHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/JSONListLoader.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/equations.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/CalculatorController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/CalculatorController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,8 +24,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JUnit5 Test Class" />
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -45,7 +53,10 @@
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
     &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/charlie.richardson/development/personal/java/calculator&quot;
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/charlie.richardson/development/personal/java/calculator&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;
   }
 }</component>
   <component name="RecentsManager">
@@ -56,8 +67,8 @@
       <recent name="org.example" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.All in calculator">
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Application.org.example.Main">
+    <configuration name="org.example.Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.example.Main" />
       <module name="calculator" />
       <extension name="coverage">
@@ -128,9 +139,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.org.example.Main" />
         <item itemvalue="JUnit.All in calculator" />
         <item itemvalue="JUnit.EquationUtilitiesTest.formatEquation_EquationWithOutWhiteSpace_ReturnsEquationFormattedCorrectly" />
-        <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.CalculatorTest.calculate_ScientificEquationWithPrecedenceBrackets_ReturnsValue" />
         <item itemvalue="JUnit.EquationUtilitiesTest.validateEquation_GivenEquationWithMultipleOperators_ThrowsException" />
       </list>

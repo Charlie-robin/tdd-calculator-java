@@ -1,23 +1,23 @@
 package org.example;
 
-import java.util.List;
-
 public class Main {
 
     /**
      * TODO:
-     * - README
      * - CLASSES FOR:
-     *  - ERROR CONTROLLER/COMMANDS
+     *  - ERROR CONTROLLER
+     * - TIDY UP TRY / CATCH
      */
 
     public static void main(String[] args) {
-        String[] options = {"Calculate", "Quit"};
-        Commands commands = new Commands();
-        CalculatorController calculatorController = new CalculatorController(commands);
-        int input;
 
+        Commands commands = new Commands();
+        EquationRepository equationRepository = new EquationRepository();
+        CalculatorController calculatorController = new CalculatorController(commands, equationRepository);
+
+        int input;
         while (true) {
+            String[] options = {"Calculate", "Quit"};
             commands.printMessage("Welcome to the Calculator Home");
             commands.printMessage("What would you like to do?");
             commands.printNumberedOptions(options);

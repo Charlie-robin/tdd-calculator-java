@@ -1,13 +1,17 @@
 package org.example;
 
+import java.io.IOException;
+
 public class CalculatorController implements Runnable {
 
     private final String[] options = {"Help", "Equation", "Back"};
     private final Calculator calculator = new Calculator();
     private final Commands commands;
+    private final EquationRepository equationRepository;
 
-    public CalculatorController(Commands commands) {
+    public CalculatorController(Commands commands, EquationRepository equationRepository) {
         this.commands = commands;
+        this.equationRepository = equationRepository;
     }
 
 
@@ -31,6 +35,11 @@ public class CalculatorController implements Runnable {
                     String equation = commands.getStringInput();
                     double result = calculator.calculate(equation);
                     commands.printMessage(String.valueOf(result));
+                    try {
+                        equationRepository.addToEquations(equation,result);
+                    } catch (IOException e) {
+                        throw new RuntimeException(e);
+                    }
                     break;
                 default:
                     break calculatorRunning;
